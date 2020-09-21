@@ -89,12 +89,14 @@ class _LoginState extends State<Login> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   FlatButton(
-                    onPressed: () => print('Sign up'),
-                    child: Text(
-                      'NEW USER? SIGN UP',
-                      style: TextStyle(color: Color(0xff333333)),
-                    ),
-                  ),
+                      onPressed: () => print('Sign up'),
+                      child: InkWell(
+                        child: Text(
+                          'NEW USER? SIGN UP',
+                          style: TextStyle(color: Color(0xff333333)),
+                        ),
+                        onTap: () => print('Tap sign up'),
+                      )),
                   FlatButton(
                     onPressed: () => print('Fotgot password'),
                     child: Text('FORGOT PASSWORD?',
