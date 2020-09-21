@@ -5,15 +5,15 @@ import 'src/screens/camera_screen.dart';
 import 'src/screens/chat_screen.dart';
 import 'src/screens/status_screen.dart';
 
-class WhatsAppHome extends StatefulWidget {
+class AppHome extends StatefulWidget {
   final List<CameraDescription> cameras;
-  WhatsAppHome({this.cameras});
+  AppHome({this.cameras});
 
   @override
-  _WhatsAppHomeState createState() => _WhatsAppHomeState();
+  _AppHomeState createState() => _AppHomeState();
 }
 
-class _WhatsAppHomeState extends State<WhatsAppHome>
+class _AppHomeState extends State<AppHome>
     with SingleTickerProviderStateMixin {
   TabController _tabController;
   bool showFab = true;
