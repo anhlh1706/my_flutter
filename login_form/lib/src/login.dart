@@ -10,8 +10,8 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   var isSercure = true;
 
-  var usernameIsValid = false;
-  var passwordIsValid = false;
+  var usernameIsValid = true;
+  var passwordIsValid = true;
 
   TextEditingController emailTEC = TextEditingController();
   TextEditingController passwordTEC = TextEditingController();
@@ -27,7 +27,7 @@ class _LoginState extends State<Login> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/cat.png'),
+              Image.asset('images/cat.png'),
               Padding(
                 padding: const EdgeInsets.only(bottom: 10),
                 child: Text(
