@@ -10,6 +10,7 @@ class CallsScreen extends StatelessWidget {
         itemCount: dataSource.length,
         itemBuilder: (context, index) {
           return Card(
+            elevation: 1.5,
             child: ListTile(
               title: Text(dataSource[index]),
             ),
