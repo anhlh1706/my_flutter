@@ -13,8 +13,7 @@ class AppHome extends StatefulWidget {
   _AppHomeState createState() => _AppHomeState();
 }
 
-class _AppHomeState extends State<AppHome>
-    with SingleTickerProviderStateMixin {
+class _AppHomeState extends State<AppHome> with SingleTickerProviderStateMixin {
   TabController _tabController;
   bool showFab = true;
 
@@ -38,12 +37,12 @@ class _AppHomeState extends State<AppHome>
     return Scaffold(
       appBar: AppBar(
         title: Text("ThisApp"),
-        elevation: 0.7,
+        elevation: 0.77,
         bottom: TabBar(
           controller: _tabController,
           indicatorColor: Colors.white,
           tabs: <Widget>[
-            Tab(icon: Icon(Icons.camera_alt)),
+            Tab(icon: Icon(Icons.camera_roll)),
             Tab(text: "CHATS"),
             Tab(
               text: "STATUS",
