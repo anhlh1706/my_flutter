@@ -21,10 +21,11 @@ class ChatScreenState extends State<ChatScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(dummyData[index].name),
-                  Text(dummyData[index].time)
                 ],
               ),
+              trailing: Text(dummyData[index].time),
               subtitle: Text(dummyData[index].message),
+              onTap: () => print("Tapped at $index"),
             ));
   }
 }
