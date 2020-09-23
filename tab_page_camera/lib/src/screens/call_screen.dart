@@ -6,15 +6,33 @@ class CallsScreen extends StatelessWidget {
           .split(' ');
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-        itemCount: dataSource.length,
-        itemBuilder: (context, index) {
-          return Card(
-            elevation: 1.5,
-            child: ListTile(
-              title: Text(dataSource[index]),
+    return Column(
+      children: [
+        Container(
+          color: Colors.white70,
+          height: 200,
+          width: double.infinity,
+          child: ListView.separated(
+            scrollDirection: Axis.horizontal,
+            itemCount: dataSource.length,
+            separatorBuilder: (context, index) => SizedBox(
+              width: 20,
+              child: Text('.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n'),
             ),
-          );
-        });
+            itemBuilder: (context, index) {
+              return SizedBox(
+                width: 120,
+                height: 200,
+                child: Image(
+                  image: NetworkImage(
+                      'http://www.usanetwork.com/sites/usanetwork/files/styles/629x720/public/suits_cast_harvey.jpg?itok=fpTOeeBb'),
+                ),
+              );
+            },
+          ),
+        ),
+        Spacer()
+      ],
+    );
   }
 }
